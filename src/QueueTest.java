@@ -5,8 +5,6 @@ public class QueueTest
 	public static void main (String[] args)
 	{
 		Queue q = new Queue();
-		// input integers until 0 is input
-		// display the queue as it gets populated
 		int input;
 		int queueSize = 0;
 		System.out.println("Creating a queue:");
@@ -20,8 +18,7 @@ public class QueueTest
 			}
 		} while( input != 0 );
 		
-		// Is there a better way of keeping track and getting the size of the queue?
-		System.out.println("\nCopying the queue into an array:");
+		System.out.println("Copying the queue into an array:");
 		int[] array = new int[queueSize];
 		for(int i = 0; i < queueSize; i++)
 		{	array[i] = q.deQueue();

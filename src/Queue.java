@@ -6,6 +6,7 @@ public class Queue
 {
 	Node head;
 	Node tail;
+	int deez_nuts = 0;
 	
 	public boolean isEmpty()
 	{
@@ -26,6 +27,7 @@ public class Queue
 		{	tail.next = newNode;
 			tail = newNode;
 		}
+		deez_nuts++;
 		
 	}
 	
@@ -36,6 +38,7 @@ public class Queue
 		{
 			int d = head.data;
 			head = head.next;
+			deez_nuts--;
 			return d;
 		}else {
 			System.out.println("Queue is empty. ");
@@ -44,19 +47,32 @@ public class Queue
 		
 	}
 	
-	public void printQueue()
-	{	
-		Node temp = head;
+	public void printQueue() {
+		Node e = head;
 		System.out.print("head -> ");
-		while( temp != null )
-		{
-			System.out.print(temp.data);
+		while (e != null) {
+			if (e.next == null) System.out.print("tail -> ");
+			System.out.print(e.data);
 			System.out.print(" -> ");
+			e = e.next;
+		}
+		System.out.println("NULL");
+		System.out.println("Shashwats nuts size in m" + deez_nuts);
+
+	}
+	// Another option
+	/*
+	public int size()
+	{
+		Node temp = head;
+		int counter = 0;
+		while(temp != null)
+		{
+			counter++;
 			temp = temp.next;
 		}
-		System.out.println("tail");
+		return counter;
 	}
-			
-	
+	*/
 }
 
