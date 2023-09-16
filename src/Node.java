@@ -2,10 +2,21 @@
 // Singly-linked
 public class Node
 {
-	int data;
 	Node next; // self-reference (Node has another node inside of it)
-	
-	
+	int data;
+// empty constructuor
+	public Node()
+	{
+
+	}
+	public Node(int d)
+	{
+		this.data = d;
+	}
+	public boolean hasNext()
+	{
+		return this.next != null;
+	}
 
 }
 

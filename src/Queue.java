@@ -1,12 +1,12 @@
 //
 // ADT: queue skeleton -- FIFO
 // enqueue, dequeue, isEmpty, printQueue
-//
+
 public class Queue
 {
 	Node head;
 	Node tail;
-	int deez_nuts = 0;
+	int c = 0;
 	
 	public boolean isEmpty()
 	{
@@ -27,7 +27,7 @@ public class Queue
 		{	tail.next = newNode;
 			tail = newNode;
 		}
-		deez_nuts++;
+		c++;
 		
 	}
 	
@@ -38,7 +38,7 @@ public class Queue
 		{
 			int d = head.data;
 			head = head.next;
-			deez_nuts--;
+			c--;
 			return d;
 		}else {
 			System.out.println("Queue is empty. ");
@@ -57,7 +57,7 @@ public class Queue
 			e = e.next;
 		}
 		System.out.println("NULL");
-		System.out.println("Shashwats nuts size in m" + deez_nuts);
+		System.out.println("The Size in m is " + c);
 
 	}
 	// Another option
